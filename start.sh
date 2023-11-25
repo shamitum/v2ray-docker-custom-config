@@ -1,10 +1,13 @@
 #!/bin/sh
 
-cd /xray
+cd /v2ray
 
 apk update
 apk add --no-cache wget unzip
-wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
-unzip ./Xray-linux-64.zip
-rm ./Xray-linux-64.zip
-./xray -c ./config.json
+mkdir ./v2ray-linux-64
+cd v2ray-linux-64
+wget https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+unzip ./v2ray-linux-64.zip
+rm ./v2ray-linux-64.zip
+rm ./v2ray-linux-64/config.json 
+v2ray --config=./config.json
