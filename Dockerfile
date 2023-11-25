@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-WORKDIR /xray
+WORKDIR /v2ray
 
 COPY config.json .
 COPY start.sh .
