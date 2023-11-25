@@ -23,18 +23,15 @@
     },
     {
       "listen": null,
-      "port": 2083,
-      "protocol": "vless",
+      "port": 8080,
+      "protocol": "vmess",
       "settings": {
         "clients": [
           {
             "email": "DSI",
-            "flow": "",
-            "id": "40b1623c-6cfe-44ef-b6f6-3e9aefc1f0c7"
+            "id": "1d5436d1-dcbf-47e9-aa38-4ccff0ac1c9e"
           }
-        ],
-        "decryption": "none",
-        "fallbacks": []
+        ]
       },
       "sniffing": {
         "destOverride": [
@@ -43,38 +40,20 @@
           "quic",
           "fakedns"
         ],
-        "enabled": true
+        "enabled": false
       },
       "streamSettings": {
-        "grpcSettings": {
-          "multiMode": true,
-          "serviceName": ""
-        },
-        "network": "grpc",
-        "realitySettings": {
-          "dest": "twitter.com:443",
-          "maxClient": "",
-          "maxTimediff": 0,
-          "minClient": "",
-          "privateKey": "0PMm4BafOB-0ZkAHM99UTEc3BN1nLqkHB0ORP6syPnU",
-          "serverNames": [
-            "twitter.com"
-          ],
-          "settings": {
-            "fingerprint": "chrome",
-            "publicKey": "hrF4O0_5-4XP86pYBEUIWWt6olucApod9M5N_--kV1I",
-            "serverName": "",
-            "spiderX": "/"
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "headers": {
+            "Host": "media-exp1.licdn.com"
           },
-          "shortIds": [
-            "71d04112"
-          ],
-          "show": false,
-          "xver": 0
-        },
-        "security": "reality"
+          "path": "/"
+        }
       },
-      "tag": "inbound-2083"
+      "tag": "inbound-8080"
     }
   ],
   "log": {
